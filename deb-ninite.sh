@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# Ensure the script is run with root privileges
+#Titel: Ninite clone für fresh Debian12 Install
+#Aktualisiert: 24-01-2025
+#Author: Merlin Krämer
+
+#Root all the things
 if [[ $EUID -ne 0 ]]; then
    echo "Install as root!" 
    exit 1
 fi
 
-# Update and install essential tools
+# Update and install essentials
 echo "Updating package list and installing dependencies..."
 apt update && apt upgrade -y
 sudo install -d -m 0755 /etc/apt/keyrings 
@@ -134,7 +138,7 @@ rm -f /tmp/firefox-nightly.tar.bz2
 echo "--------------------------- Done!----------------------------"
 read -p "Do you want to reboot now? (Y/N): " choice
 
-# Handle the choice
+# Reboot Y/N
 case "$choice" in
     [Yy]|[Yy][Ee][Ss]) # Accepts Y, y, Yes, yes
         echo "Rebooting now..."
