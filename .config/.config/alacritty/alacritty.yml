@@ -1,0 +1,20 @@
+live_config_reload: true
+
+window:
+  opacity: 0.85
+  padding:
+    x: 18
+    y: 16
+  dynamic_padding: true
+  decorations: buttonless
+
+font:
+  normal:
+    family: "SFMono Nerd Font"
+    style: Regular
+  size: 22.0
+
+use_thin_strokes: true
+
+save_to_clipboard: true
+live_config_reload: true
