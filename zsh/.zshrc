@@ -103,7 +103,8 @@ alias eh="cd /mnt/teams/Eventhandel.de/"
 # ----------------------
 # Config Aliases
 # ----------------------
-alias zshconf="vim ~/dotfiles/zsh/.zshrc"
+alias zshconfig="vim ~/dotfiles/zsh/.zshrc"
+alias i3config="vim ~/dotfiles/.config/.config/i3/config"
 # ----------------------
 # Git Aliases
 # ----------------------
