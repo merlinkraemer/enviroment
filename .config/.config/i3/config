@@ -11,7 +11,7 @@ exec_always --no-startup-id xrandr --output $sm --mode 2560x1440 --rate 59.95 --
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 15px
+font pango:Cousine Nerd Font 15px
 
 # GET DEM BORDERS OUT OF HEREc:w
 #
@@ -36,7 +36,12 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $win+1 exec alacritty
+# start browser
 bindsym $mod+Shift+Return exec firefox-nightly
+bindsym $win+2 exec firefox-nightly
+# start ai wrapper
+bindsym $win+3 exec ~/Applications/cherrystudio.AppImage
 
 # kill focused window
 bindsym $mod+q kill
@@ -136,6 +141,16 @@ workspace 7 output $fm
 workspace 8 output $fm
 workspace 9 output $fm
 
+#Tabbed layout for specific Applications
+for_window [class="chrome"] layout stacked
+for_window [class="firefox-nightly"] layout stacked
+
+#Shortcut to alt+tab to last focused window (w/ i3-back)
+# Start the daemon
+exec --no-startup-id ~/.cargo/bin/i3-back
+# Bind alt+tab to fucs last
+bindsym $mod+Tab [con_mark=_back] focus
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -204,6 +219,10 @@ set $aqua #689d68
 set $gray #a89984
 set $darkgray #1d2021
 set $lightgray #bdae93
+
+#set x bg color to $bg
+exec_always --no-startup-id xsetroot -solid "$bg"
+
 
 bar {
 	position top
