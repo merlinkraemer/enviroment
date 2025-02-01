@@ -127,3 +127,10 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Auto Suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# export all Applications in /Applications to PATH
+export PATH="$HOME/Applications:$PATH"
+
+# export all scripts in ~/.local/scripts to PATH
+PATH="$PATH":"$HOME/.local/scripts/"
+bindkey -s ^f "tmux-sessionizer\n"
