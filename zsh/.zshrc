@@ -86,15 +86,15 @@ bindkey '^[[B' history-search-forward
 alias l="ls" # List files in current directory
 alias ll="ls -al" # List all files in current directory in long list format
 alias o="open ." # Open the current directory in Finder
-
+alias c="clear"
 
 # ----------------------
 # SSH Aliases
 # ----------------------
 alias sav="ssh merlinkraemer@sav"
 alias stu="ssh merlinkraemer@stu"
-alias air="ssh merlinkramer@air"
-
+alias air="ssh merlinkramer@100.107.77.127"
+alias allinkl="ssh ssh-w01bb550@w01bb550.kasserver.com"
 # ----------------------
 # Path Aliases
 # ----------------------
