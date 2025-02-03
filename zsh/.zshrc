@@ -103,8 +103,8 @@ alias eh="cd /mnt/teams/Eventhandel.de/"
 # ----------------------
 # Config Aliases
 # ----------------------
-alias zshconfig="vim ~/dotfiles/zsh/.zshrc"
-alias i3config="vim ~/dotfiles/.config/.config/i3/config"
+alias zshconfig="nvim ~/dotfiles/zsh/.zshrc"
+alias i3config="nvim ~/dotfiles/.config/.config/i3/config"
 # ----------------------
 # Git Aliases
 # ----------------------
@@ -118,6 +118,9 @@ alias gs='echo ""; echo "*********************************************"; echo -e
 alias ls="eza --icons=always"
 
 unsetopt CORRECT
+
+# xterm colors
+export TERM=xterm-256color
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -134,3 +137,6 @@ export PATH="$HOME/Applications:$PATH"
 # export all scripts in ~/.local/scripts to PATH
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+DISABLE_MAGIC_FUNCTIONS=true
