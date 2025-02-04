@@ -145,6 +145,9 @@ workspace 9 output $fm
 for_window [class="chrome"] layout stacked
 for_window [class="firefox-nightly"] layout stacked
 
+# xmodmap map capslock as second ctrl
+exec --no-startup-id xmodmap ~/.Xmodmap
+
 #Shortcut to alt+tab to last focused window (w/ i3-back)
 # Start the daemon
 exec --no-startup-id ~/.cargo/bin/i3-back
