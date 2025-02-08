@@ -36,12 +36,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-bindsym $win+1 exec alacritty
 # start browser
 bindsym $mod+Shift+Return exec firefox-nightly
-bindsym $win+2 exec firefox-nightly
-# start ai wrapper
-bindsym $win+3 exec ~/Applications/cherrystudio.AppImage
 
 # kill focused window
 bindsym $mod+q kill
