@@ -105,6 +105,7 @@ alias eh="cd /mnt/teams/Eventhandel.de/"
 # ----------------------
 alias zshconfig="nvim ~/dotfiles/zsh/.zshrc"
 alias i3config="nvim ~/dotfiles/.config/.config/i3/config"
+alias tmuxconfig="nvim ~/dotfiles/tmux/.tmux.conf"
 # ----------------------
 # Git Aliases
 # ----------------------
@@ -113,6 +114,9 @@ alias gcm='git commit -m'
 alias gpsh='git push'
 alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
+
+# WOL
+alias wol-stu='ssh merlinkraemer@pi "sudo /usr/local/bin/wol.sh" >/dev/null 2>&1'
 
 # Eza (better ls) Alias
 alias ls="eza --icons=always"
