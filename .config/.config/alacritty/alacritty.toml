@@ -78,6 +78,6 @@ mods = "Control"
 chars = "\uE009"
 
 [[keyboard.bindings]]
-key = "k"
+key = "e"
 mods = "Control"
 chars = "\uE010"

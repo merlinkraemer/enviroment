@@ -48,8 +48,8 @@ client.urgent           $red $red $white $red $red
 exec_always --no-startup-id xsetroot -solid "$bg"
 
 # no borders:
-for_window [class="^.*"] border pixel 2
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] client.focused          #282828 #282828 #ffffff #282828   #282828
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
