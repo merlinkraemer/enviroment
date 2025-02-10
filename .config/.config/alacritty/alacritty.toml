@@ -77,3 +77,7 @@ key = "9"
 mods = "Control"
 chars = "\uE009"
 
+[[keyboard.bindings]]
+key = "k"
+mods = "Control"
+chars = "\uE010"
