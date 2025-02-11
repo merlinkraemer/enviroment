@@ -16,20 +16,31 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- set leadkey bevor plugins geloaded werden damit das geht
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
-
 require('lazy').setup({
- { import = "plugins" },
   {"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
   {'neovim/nvim-lspconfig'},
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/nvim-cmp'},
-  { "MunifTanjim/nui.nvim", lazy = true }
+  {
+  "christoomey/vim-tmux-navigator",
+  cmd = {
+    "TmuxNavigateLeft",
+    "TmuxNavigateDown",
+    "TmuxNavigateUp",
+    "TmuxNavigateRight",
+    "TmuxNavigatePrevious",
+    "TmuxNavigatorProcessList",
+  },
+  keys = {
+    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+  },
+}
 })
 
 -- Set colorscheme

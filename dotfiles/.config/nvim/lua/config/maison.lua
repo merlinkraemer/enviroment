@@ -1,3 +1,0 @@
-{
-    "williamboman/mason.nvim"
-}

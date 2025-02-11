@@ -3,13 +3,13 @@ vim.g.mapleader = " "
 
 -- Map leader+e to :Ex
 vim.keymap.set("n", "<leader>e", function()
-    vim.cmd("NvimTreeToggle")
+  vim.cmd("Ex")
 end)
 --keeps search in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 --copy to system clipboard leader y
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 --no Q cmd
