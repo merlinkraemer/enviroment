@@ -17,9 +17,9 @@ style = "Regular"
 
 
 [window]
-# decorations = "buttonless"
+decorations = "buttonless"
 dynamic_padding = false
-#opacity = 0.5
+opacity = 0.9
 
 [window.padding]
 x = 14
@@ -80,4 +80,4 @@ chars = "\uE009"
 [[keyboard.bindings]]
 key = "e"
 mods = "Control"
-chars = "\uE010"
+chars = "\uE020"

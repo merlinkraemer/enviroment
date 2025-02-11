@@ -26,7 +26,7 @@ ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="false"
 
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,10 +89,10 @@ alias allinkl="ssh ssh-w01bb550@w01bb550.kasserver.com"
 # ----------------------
 # Config Aliases
 # ----------------------
-alias zshconfig="nvim ~/dotfiles/zsh/.zshrc"
-alias i3config="nvim ~/dotfiles/.config/.config/i3/config"
-alias tmuxconfig="nvim ~/dotfiles/tmux/.tmux.conf"
-alias alacrittyconfig="nvim ~/dotfiles/.config/.config/alacritty/alacritty.toml"
+alias zshconfig="nvim ~/dev/enviroment/dotfiles/.zshrc"
+alias i3config="nvim ~/dev/enviroment/dotfiles/.config/i3/config"
+alias tmuxconfig="nvim ~/dev/enviroment/dotfiles/.tmux.conf"
+alias alacrittyconfig="nvim ~/dev/enviroment/dotfiles/.config/alacritty.toml"
 
 # ----------------------
 # Git Aliases
@@ -107,29 +107,29 @@ alias gs='echo ""; echo "*********************************************"; echo -e
 alias wol-stu='ssh merlinkraemer@pi "sudo /usr/local/bin/wol.sh" >/dev/null 2>&1'
 
 # Eza (better ls) Alias
-alias ls="eza --icons=always"
+# alias ls="eza --icons=always"
 
 unsetopt CORRECT
 
-# xterm colors
+#:w xterm colors
 export TERM=xterm-256color
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Syntax Highlighting
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Auto Suggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #vim mode
-source "$HOME/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+# source "$HOME/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
 
 # export all Applications in /Applications to PATH
 export PATH="$HOME/Applications:$PATH"
 
 # export all scripts in ~/.local/scripts to PATH
-PATH="$PATH":"$HOME/.local/scripts/"
+# PATH="$PATH":"$HOME/.local/scripts/"
 
 DISABLE_MAGIC_FUNCTIONS=true
 
