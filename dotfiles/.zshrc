@@ -138,3 +138,6 @@ DISABLE_MAGIC_FUNCTIONS=true
 
 #add zoxide to path
 eval "$(zoxide init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/dev/enviroment/dotfiles/.p10k.zsh.
+[[ ! -f ~/dev/enviroment/dotfiles/.p10k.zsh ]] || source ~/dev/enviroment/dotfiles/.p10k.zsh
