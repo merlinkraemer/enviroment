@@ -26,7 +26,7 @@ ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="false"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode) 
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting) 
 
 source $ZSH/oh-my-zsh.sh
 
