@@ -26,7 +26,7 @@ ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="false"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting) 
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +71,7 @@ bindkey '^[[B' history-search-forward
 alias l="ls" # List files in current directory
 alias ll="ls -al" # List all files in current directory in long list format
 alias c="clear"
-alias p="python3"
+
 # ----------------------
 # SSH Aliases
 # ----------------------
@@ -107,7 +107,7 @@ alias gs='echo ""; echo "*********************************************"; echo -e
 alias wol-stu='ssh merlinkraemer@pi "sudo /usr/local/bin/wol.sh" >/dev/null 2>&1'
 
 # Eza (better ls) Alias
-# alias ls="eza --icons=always"
+ alias ls="eza --icons=always"
 
 unsetopt CORRECT
 
@@ -128,8 +128,8 @@ export TERM=xterm-256color
 # export all Applications in /Applications to PATH
 export PATH="$HOME/Applications:$PATH"
 
-# export all scripts in ~/dev/scripts to PATH
-PATH="$PATH":"$HOME/dev/scripts/"
+# export all scripts in ~/.local/scripts to PATH
+# PATH="$PATH":"$HOME/.local/scripts/"
 
 DISABLE_MAGIC_FUNCTIONS=true
 
@@ -141,4 +141,3 @@ eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/dev/enviroment/dotfiles/.p10k.zsh.
 [[ ! -f ~/dev/enviroment/dotfiles/.p10k.zsh ]] || source ~/dev/enviroment/dotfiles/.p10k.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

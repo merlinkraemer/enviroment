@@ -17,7 +17,7 @@ exec_always --no-startup-id xrandr --output $fm --mode 2560x1440 --rate 59.95 --
 exec_always --no-startup-id xrandr --output $sm --mode 2560x1440 --rate 59.95 --right-of DP-0 --scale 1x1 --dpi 92 &
 
 #exec picom
-exec_always --no-startup-id picom --backend glx --vsync
+exec_always --no-startup-id picom
 
 # exec polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
@@ -45,7 +45,7 @@ client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
 client.urgent           $red $red $white $red $red
 
 #set x bg color to $bg
-exec_always --no-startup-id hsetroot -solid "$bg"
+exec_always --no-startup-id xsetroot -solid "$bg"
 
 # no borders:
 for_window [class="^.*"] border pixel 0
@@ -100,7 +100,7 @@ bindsym $mod+Shift+l move right
 # bindsym $mod+Shift+Right move right
 
 # enter fullscreen mode for the focused container
-#bindsym $mod+shift+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 bindsym $mod+shift+e move container to output next; focus output next
 focus_follows_mouse no
 
@@ -145,16 +145,6 @@ workspace 9 output $fm
 #Tabbed layout for specific Applications
 for_window [class="chrome"] layout stacked
 for_window [class="firefox-nightly"] layout stacked
-
-# Remmina dual monitor setup for DP-0 and HDMI-0# Create a separate script for Remmina toggling
-# Regular fullscreen toggle 
-bindsym $mod+Shift+f fullscreen toggle
-
-# Dual-monitor floating mode (for any window)
-bindsym $mod+Shift+ctrl+f floating toggle; [floating] resize set 3840 1080; [floating] move position 0 0; [floating] border none
-
-
-
 
 # xmodmap map capslock as second ctrl
 exec --no-startup-id xmodmap ~/.Xmodmap
