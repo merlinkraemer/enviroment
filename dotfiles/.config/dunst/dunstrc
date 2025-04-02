@@ -1,0 +1,43 @@
+[global]
+monitor = 0
+geometry = "300x5-10+50"
+indicate_hidden = yes
+shrink = no
+transparency = 15
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+font = Cousine Nerd Font 10
+line_height = 0  # Use font height
+separator_height = 2
+padding = 10
+horizontal_padding = 10
+icon_position = left
+max_icon_size = 32
+frame_width = 2
+separator_color = auto
+sort = yes
+word_wrap = yes
+idle_threshold = 120
+follow = mouse
+
+# Urgency low (passive)
+[urgency_low]
+    background = "#1d2021"   # $darkgray
+    foreground = "#a89984"   # $gray
+    frame_color = "#1d2021"
+    timeout = 5
+
+# Urgency normal (default)
+[urgency_normal]
+    background = "#282828"   # $bg
+    foreground = "#bdae93"   # $lightgray
+    frame_color = "#458588"  # $blue
+    timeout = 10
+
+# Urgency critical (highlighted)
+[urgency_critical]
+    background = "#cc241d"   # $red
+    foreground = "#ffffff"   # $white
+    frame_color = "#cc241d"
+    timeout = 0
