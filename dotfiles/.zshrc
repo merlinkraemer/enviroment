@@ -79,7 +79,7 @@ alias sav="ssh merlinkraemer@sav"
 alias stu="ssh merlinkraemer@stu"
 alias air="ssh merlinkramer@100.107.77.127"
 alias allinkl="ssh ssh-w01bb550@w01bb550.kasserver.com"
-
+alias probevm02="ssh merlinkraemer@probevm02"
 
 # ----------------------
 # Path Aliases

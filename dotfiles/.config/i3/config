@@ -13,8 +13,13 @@ set $win Mod4
 
 ####execs
 #display settings
-exec_always --no-startup-id xrandr --output $fm --mode 2560x1440 --rate 59.95 --primary --scale 1x1 --dpi 92 &
-exec_always --no-startup-id xrandr --output $sm --mode 2560x1440 --rate 59.95 --right-of DP-0 --scale 1x1 --dpi 92 &
+
+ exec_always --no-startup-id xrandr --output $fm --auto --primary & 
+ exec_always --no-startup-id xrandr --output $sm --auto --right-of DP-0 &
+
+# exec_always --no-startup-id xrandr --output $fm --mode 2560x1440 --rate 59.95 --primary --scale 1x1 --dpi 92 &
+# exec_always --no-startup-id xrandr --output $sm --mode 2560x1440 --rate 59.95 --right-of DP-0 --scale 1x1 --dpi 92 &
+
 
 #exec picom
 exec_always --no-startup-id picom --backend glx --vsync
@@ -143,17 +148,17 @@ workspace 8 output $fm
 workspace 9 output $fm
 
 #Tabbed layout for specific Applications
-for_window [class="chrome"] layout stacked
-for_window [class="firefox-nightly"] layout stacked
+for_window [class="chrome"] layout tabbed
+for_window [class="firefox-nightly"] layout stacking
 
-# Remmina dual monitor setup for DP-0 and HDMI-0# Create a separate script for Remmina toggling
+#toggle tabbed / tiled
+bindsym $mod+Shift+t layout toggle
+
 # Regular fullscreen toggle 
 bindsym $mod+Shift+f fullscreen toggle
 
-# Dual-monitor floating mode (for any window)
-bindsym $mod+Shift+ctrl+f floating toggle; [floating] resize set 3840 1080; [floating] move position 0 0; [floating] border none
-
-
+# dual monitor fullscreen
+bindsym $mod+Shift+ctrl+f fullscreen toggle global
 
 
 # xmodmap map capslock as second ctrl
