@@ -32,15 +32,17 @@ import = [
 #	 "~/.config/alacritty/themes/gruber_darker.toml"
 ]
 
-key_bindings:
-  # Map Super+Number to send custom escape sequence \x1b[N;9~
-  - { key: Key1, mods: Super, chars: "\x1b[1;9~" }
-  - { key: Key2, mods: Super, chars: "\x1b[2;9~" }
-  - { key: Key3, mods: Super, chars: "\x1b[3;9~" }
-  - { key: Key4, mods: Super, chars: "\x1b[4;9~" }
-  - { key: Key5, mods: Super, chars: "\x1b[5;9~" }
-  - { key: Key6, mods: Super, chars: "\x1b[6;9~" }
-  - { key: Key7, mods: Super, chars: "\x1b[7;9~" }
-  - { key: Key8, mods: Super, chars: "\x1b[8;9~" }
-  - { key: Key9, mods: Super, chars: "\x1b[9;9~" }
-  - { key: Key0, mods: Super, chars: "\x1b[0;9~" }
+[keyboard]
+bindings = [
+   # Map Super+Number to send custom escape sequence \x1b[N;9~
+   # Use \u001b for ESC in TOML strings
+   { key = "Key1", mods = "Super", chars = "\u001b[1;9~" },
+   { key = "Key2", mods = "Super", chars = "\u001b[2;9~" },
+   { key = "Key3", mods = "Super", chars = "\u001b[3;9~" },
+   { key = "Key4", mods = "Super", chars = "\u001b[4;9~" },
+   { key = "Key5", mods = "Super", chars = "\u001b[5;9~" },
+   { key = "Key6", mods = "Super", chars = "\u001b[6;9~" },
+   { key = "Key7", mods = "Super", chars = "\u001b[7;9~" },
+   { key = "Key8", mods = "Super", chars = "\u001b[8;9~" },
+   { key = "Key9", mods = "Super", chars = "\u001b[9;9~" },
+   { key = "Key0", mods = "Super", chars = "\u001b[0;9~" },
