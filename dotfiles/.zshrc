@@ -72,6 +72,8 @@ alias l="ls" # List files in current directory
 alias ll="ls -al" # List all files in current directory in long list format
 alias c="clear"
 alias p="python3"
+alias cast='echo "casting at 5092"; ~/dev/scripts/studio_cast.sh && pi "~/start_vnc_cast.sh"'
+alias stop-cast="echo "stopped"; ~/dev/scripts/stop_studio_cast.sh"
 # ----------------------
 # SSH Aliases
 # ----------------------
@@ -80,6 +82,7 @@ alias stu="ssh merlinkraemer@stu"
 alias air="ssh merlinkramer@100.107.77.127"
 alias allinkl="ssh ssh-w01bb550@w01bb550.kasserver.com"
 alias probevm02="ssh merlinkraemer@probevm02"
+alias pi="ssh merlinkraemer@pi"
 
 # ----------------------
 # Path Aliases

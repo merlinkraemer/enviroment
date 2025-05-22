@@ -3,25 +3,14 @@
 
 ###### vars
 
-#monitors
-set $fm DP-0
-set $sm HDMI-0
 #mod keys
 set $mod Mod1
 set $win Mod4
+set $fm DP-0     # 4K-Monitor (links)
+set $sm HDMI-0   # 2K-Monitor (rechts)
 
+exec_always --no-startup-id autorandr --load dual-monitor
 
-####execs
-#display settings
-
- exec_always --no-startup-id xrandr --output $fm --auto --primary & 
- exec_always --no-startup-id xrandr --output $sm --auto --right-of DP-0 &
-
-# exec_always --no-startup-id xrandr --output $fm --mode 2560x1440 --rate 59.95 --primary --scale 1x1 --dpi 92 &
-# exec_always --no-startup-id xrandr --output $sm --mode 2560x1440 --rate 59.95 --right-of DP-0 --scale 1x1 --dpi 92 &
-
-
-#exec picom
 exec_always --no-startup-id picom --backend glx --vsync
 
 # exec polybar
@@ -70,7 +59,7 @@ font pango:Cousine Nerd Font
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 # start browser
 bindsym $mod+Shift+Return exec firefox-nightly
 
@@ -146,6 +135,11 @@ workspace 6 output $sm
 workspace 7 output $fm
 workspace 8 output $fm
 workspace 9 output $fm
+
+# Media Keys
+bindcode 173 exec playerctl previous  # Keycode for Previous
+bindcode 172 exec playerctl play-pause # Keycode for Play/Pause
+bindcode 171 exec playerctl next     # Keycode for Next
 
 #Tabbed layout for specific Applications
 for_window [class="chrome"] layout tabbed
