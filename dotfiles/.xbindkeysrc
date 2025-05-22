@@ -1,0 +1,123 @@
+# ~/dev/enviroment/dotfiles/.xbindkeysrc
+# -----------------------------------------------------------------------------
+# Expanded Tmux Control with Super (Mod4) Key
+#
+# - Super + <number> (1-9) to switch tmux windows
+# - Super + w for tmux window overview (choose-window)
+# - Super + q to kill current tmux window (with confirmation)
+# - Super + c for new tmux window (retains path)
+# - Super + r to reload tmux config
+# - Super + % (Shift+5) to split horizontally (retains path)
+# - Super + " (Shift+') to split vertically (retains path)
+# - Super + x to kill current tmux pane (no confirmation)
+# - Super + h/j/k/l to navigate tmux panes
+# - Super + o for next pane, Super + ; for last active pane
+# - Super + z to zoom current pane
+# - Super + d to detach tmux client
+# - Super + s to choose session/tree
+#
+# IMPORTANT:
+# 1. You MUST disable/reassign conflicting Super+<key> shortcuts in your
+#    i3 config (especially for c, r, x, h, j, k, l, o, ;, z, d, s,
+#    Shift+5, Shift+').
+# 2. Assumes tmux base-index is 1 (from your tmux.conf).
+# -----------------------------------------------------------------------------
+
+# --- Tmux Window Switching (Super + 1-9) ---
+"tmux select-window -t :1"
+  Mod4 + 1
+"tmux select-window -t :2"
+  Mod4 + 2
+"tmux select-window -t :3"
+  Mod4 + 3
+"tmux select-window -t :4"
+  Mod4 + 4
+"tmux select-window -t :5"
+  Mod4 + 5
+"tmux select-window -t :6"
+  Mod4 + 6
+"tmux select-window -t :7"
+  Mod4 + 7
+"tmux select-window -t :8"
+  Mod4 + 8
+"tmux select-window -t :9"
+  Mod4 + 9
+# Optional: Super+0 for window 10
+# "tmux select-window -t :10"
+#  Mod4 + 0
+
+# --- Tmux Window Overview (Super + w) ---
+"tmux choose-window"
+  Mod4 + w
+
+# --- Tmux Kill Current Window (Super + q) ---
+"tmux kill-window"
+  Mod4 + q
+
+# --- Tmux New Window (Super + c) ---
+# (Uses -c '#{pane_current_path}' from your tmux.conf)
+"tmux new-window -c '#{pane_current_path}'"
+  Mod4 + c
+
+# --- Tmux Reload Config (Super + r) ---
+# (Matches 'bind r source-file ~/.tmux.conf ...' from your tmux.conf)
+"tmux source-file ~/.tmux.conf \; display-message 'Config reloaded...'"
+  Mod4 + r
+
+
+# --- Tmux Pane Management ---
+
+# Split pane horizontally (Super + % / Super + Shift + 5)
+# (Uses -c '#{pane_current_path}' from your tmux.conf)
+"tmux split-window -h -c '#{pane_current_path}'"
+  Mod4 + Shift + 5
+
+# Split pane vertically (Super + " / Super + Shift + ')
+# (Uses -c '#{pane_current_path}' from your tmux.conf)
+"tmux split-window -v -c '#{pane_current_path}'"
+  Mod4 + Shift + apostrophe # For US layout, Shift + ' is "
+
+# Kill current pane (Super + x)
+# (Matches 'bind-key x kill-pane' - no confirmation, from your tmux.conf)
+"tmux kill-pane"
+  Mod4 + x
+
+# Navigate panes with Vim keys (Super + h/j/k/l)
+# Note: This is direct tmux pane navigation. It might not be
+# as seamless with Vim splits as vim-tmux-navigator's Ctrl+hjkl.
+"tmux select-pane -L"
+  Mod4 + h
+"tmux select-pane -D"
+  Mod4 + j
+"tmux select-pane -U"
+  Mod4 + k
+"tmux select-pane -R"
+  Mod4 + l
+
+# Next pane (Super + o) - Standard tmux binding
+"tmux select-pane -t :.+"
+  Mod4 + o
+
+# Previous/last active pane (Super + ; / Super + semicolon) - Standard tmux binding
+"tmux select-pane -l"
+  Mod4 + semicolon
+
+# Zoom current pane (Super + z)
+"tmux resize-pane -Z"
+  Mod4 + z
+
+
+# --- Tmux Session Management ---
+
+# Detach client (Super + d)
+"tmux detach-client"
+  Mod4 + d
+
+# List/Choose session/tree (Super + s)
+"tmux choose-tree -Zs" # For newer tmux
+# "tmux choose-session" # For older tmux
+  Mod4 + s
+
+# -----------------------------------------------------------------------------
+# End of Expanded Tmux Mappings
+# -----------------------------------------------------------------------------
