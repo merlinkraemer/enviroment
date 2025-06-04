@@ -74,6 +74,8 @@ alias c="clear"
 alias p="python3"
 alias cast='echo "casting at 5092"; ~/dev/scripts/studio_cast.sh && pi "~/start_vnc_cast.sh"'
 alias stop-cast="echo "stopped"; ~/dev/scripts/stop_studio_cast.sh"
+alias spotdl="~/dev/scripts/spotdl.sh"
+
 # ----------------------
 # SSH Aliases
 # ----------------------
